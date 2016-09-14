@@ -23,11 +23,11 @@ var email_domain = configFile.emailDomain;
 var lat = configFile.latitude;
 var lon = configFile.longitude;
 var country = configFile.country;
-var useAutoCatcha = configfile.useAutoCatcha;
+var useAutoCaptcha = configFile.useAutoCaptcha;
 var captchaApiKey = configFile.captchaApiKey;
 // End Config File Imports
 
-if(useAutoCatcha)
+if(useAutoCaptcha)
 	showWindow = false;
 
 // argv parse
@@ -232,7 +232,7 @@ function fillSignupPage(ctr) {
     }
     
     // Fill it all in
-	if(useAutoCatcha)
+	if(useAutoCaptcha)
 	{
 		nightmare.evaluate(function(data) {
 				document.getElementById("id_password").value = data.pass;
